@@ -1,0 +1,199 @@
+:root {
+    --bg-1: #0f2027;
+    --bg-2: #203a43;
+    --bg-3: #2c5364;
+    --accent: #00f2fe;
+    --accent-2: #4facfe;
+    --danger-1: #ff416c;
+    --danger-2: #ff4b2b;
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-strong: rgba(255, 255, 255, 0.14);
+    --text: #ffffff;
+    --radius: 18px;
+    --transition: 0.25s cubic-bezier(.4,.2,.2,1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, var(--bg-1), var(--bg-2), var(--bg-3), #111);
+    background-size: 300% 300%;
+    animation: gradientBG 10s ease infinite;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px;
+    border-radius: var(--radius);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    animation: fadeIn .6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, var(--accent), var(--accent-2));
+    -webkit-text-fill-color: transparent;
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    outline: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+input:focus {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,242,254,0.2);
+    background: rgba(255,255,255,0.18);
+}
+
+button {
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    background: linear-gradient(45deg, var(--accent), var(--accent-2));
+    color: #000;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,242,254,0.5);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--glass-strong);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    animation: slideIn .4s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+li span {
+    flex: 1;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+li button {
+    margin-left: 12px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    background: linear-gradient(45deg, var(--danger-1), var(--danger-2));
+    color: white;
+}
+
+li button:hover {
+    box-shadow: 0 6px 20px rgba(255,65,108,0.5);
+}
+
+.fade-out {
+    animation: fadeOut .4s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(30px);
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
