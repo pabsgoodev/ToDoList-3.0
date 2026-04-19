@@ -1,105 +1,125 @@
-📝 API To-Do List
+```md
+# 📝 To-Do API — Full Stack
 
-Esta é uma API REST para gerenciamento de tarefas (To-Do List), desenvolvida para estudo e prática de backend com integração a banco de dados.
-O projeto também possui uma interface simples em HTML, CSS e JavaScript para consumir a API.
+API REST para gerenciamento de tarefas, com integração a banco de dados e uma interface simples para consumo dos endpoints.
 
-Funcionalidades
+## Objetivo
 
-Criar nova tarefa
+Praticar desenvolvimento backend com TypeScript, integração com banco relacional e consumo de API via frontend básico.
 
-Listar todas as tarefas
+## Funcionalidades
 
-Buscar tarefa por ID
+- Criar tarefa
+- Listar todas as tarefas
+- Buscar tarefa por ID
+- Atualizar tarefa
+- Marcar como concluída
+- Deletar tarefa
+- Persistência em banco de dados
 
-Atualizar tarefa
+## Tecnologias utilizadas
 
-Marcar tarefa como concluída
+### Backend
+- Node.js
+- Express
+- TypeScript
+- TypeORM
+- MariaDB
 
-Deletar tarefa
+### Frontend
+- HTML
+- CSS
+- JavaScript
 
-Persistência de dados no banco
+## Estrutura do projeto
 
-Tecnologias utilizadas
-Backend
+```
 
-Node.js
-
-Express
-
-TypeScript
-
-TypeORM
-
-MariaDB
-
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-Estrutura do Projeto
 src/
- ├── controllers/
- ├── entities/
- ├── routes/
- ├── database/
- └── server.ts
+├── controllers/
+├── entities/
+├── routes/
+├── database/
+└── server.ts
 
 public/
- ├── index.html
- ├── style.css
- └── script.js
-Rotas da API
-GET /tasks
+├── index.html
+├── style.css
+└── script.js
 
-Lista todas as tarefas.
+````
 
-GET /tasks/:id
+## Rotas da API
 
-Busca uma tarefa pelo ID.
+### GET /tasks
+Lista todas as tarefas
 
-POST /tasks
+### GET /tasks/:id
+Busca tarefa por ID
 
-Cria uma nova tarefa.
+### POST /tasks
+Cria nova tarefa
 
-PUT /tasks/:id
+### PUT /tasks/:id
+Atualiza tarefa
 
-Atualiza uma tarefa existente.
+### DELETE /tasks/:id
+Remove tarefa
 
-DELETE /tasks/:id
+## Banco de dados
 
-Remove uma tarefa.
+- Utiliza MariaDB via TypeORM
+- Configuração feita no arquivo de conexão (`data-source.ts`)
 
-Objetivo do Projeto
+## Como rodar o projeto
 
-Praticar criação de API REST
-
-Aplicar TypeScript no backend
-
-Trabalhar com ORM (TypeORM)
-
-Integrar banco de dados relacional
-
-Conectar frontend com backend
-
-Construir projeto para portfólio
-
-Como executar o projeto
-1. Clonar o repositório
+### 1. Clonar repositório
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
-2. Instalar dependências
+````
+
+### 2. Instalar dependências
+
+```bash
 npm install
-3. Configurar o banco
+```
 
-Criar o banco no MariaDB e ajustar o arquivo de conexão (data-source.ts).
+### 3. Configurar variáveis de ambiente
 
-4. Rodar o servidor
+Crie um arquivo `.env`:
+
+```env
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+```
+
+### 4. Rodar o servidor
+
+```bash
 npm run dev
+```
 
-Servidor padrão:
+Servidor:
 
+```
 http://localhost:3000
+```
+
+## Observações
+
+* Projeto voltado para estudo e portfólio
+* Estrutura simples e direta
+* Fácil expansão para novos módulos
+
+## Status do projeto
+
+* Tipo: Full Stack
+* Uso: Portfólio / Estudo
+* Estado: Funcional
+
+```
+```
