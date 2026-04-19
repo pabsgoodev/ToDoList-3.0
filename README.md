@@ -75,8 +75,8 @@ Remove tarefa
 
 ### 1. Clonar repositório
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/pabsgoodev/ToDoList-3.0.git
+cd 
 ````
 
 ### 2. Instalar dependências
