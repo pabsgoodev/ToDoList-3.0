@@ -1,40 +1,40 @@
-```md
 # 📝 To-Do API — Full Stack
 
-API REST para gerenciamento de tarefas, com integração a banco de dados e uma interface simples para consumo dos endpoints.
+A full-stack REST API for task management, featuring database persistence and a simple frontend interface for interacting with the API endpoints.
 
-## Objetivo
+## Purpose
 
-Praticar desenvolvimento backend com TypeScript, integração com banco relacional e consumo de API via frontend básico.
+This project was built to practice backend development with **TypeScript**, relational database integration, and REST API consumption through a basic frontend application.
 
-## Funcionalidades
+## Features
 
-- Criar tarefa
-- Listar todas as tarefas
-- Buscar tarefa por ID
-- Atualizar tarefa
-- Marcar como concluída
-- Deletar tarefa
-- Persistência em banco de dados
+* Create tasks
+* Retrieve all tasks
+* Retrieve a task by ID
+* Update existing tasks
+* Mark tasks as completed
+* Delete tasks
+* Persistent data storage using a relational database
 
-## Tecnologias utilizadas
+## Technologies
 
 ### Backend
-- Node.js
-- Express
-- TypeScript
-- TypeORM
-- MariaDB
+
+* Node.js
+* Express
+* TypeScript
+* TypeORM
+* MariaDB
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
 
-## Estrutura do projeto
+* HTML
+* CSS
+* JavaScript
 
-```
+## Project Structure
 
+```text
 src/
 ├── controllers/
 ├── entities/
@@ -46,48 +46,54 @@ public/
 ├── index.html
 ├── style.css
 └── script.js
+```
 
-````
+## API Endpoints
 
-## Rotas da API
+### `GET /tasks`
 
-### GET /tasks
-Lista todas as tarefas
+Returns all tasks.
 
-### GET /tasks/:id
-Busca tarefa por ID
+### `GET /tasks/:id`
 
-### POST /tasks
-Cria nova tarefa
+Returns a specific task by its ID.
 
-### PUT /tasks/:id
-Atualiza tarefa
+### `POST /tasks`
 
-### DELETE /tasks/:id
-Remove tarefa
+Creates a new task.
 
-## Banco de dados
+### `PUT /tasks/:id`
 
-- Utiliza MariaDB via TypeORM
-- Configuração feita no arquivo de conexão (`data-source.ts`)
+Updates an existing task.
 
-## Como rodar o projeto
+### `DELETE /tasks/:id`
 
-### 1. Clonar repositório
+Deletes a task.
+
+## Database
+
+The project uses **MariaDB** with **TypeORM** for data persistence.
+
+Database connection settings are configured in the `data-source.ts` file.
+
+## Getting Started
+
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/pabsgoodev/ToDoList-3.0.git
-cd 
-````
+cd ToDoList-3.0
+```
 
-### 2. Instalar dependências
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configurar variáveis de ambiente
+### 3. Configure environment variables
 
-Crie um arquivo `.env`:
+Create a `.env` file in the project root:
 
 ```env
 DB_HOST=
@@ -97,29 +103,36 @@ DB_PASSWORD=
 DB_NAME=
 ```
 
-### 4. Rodar o servidor
+### 4. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Servidor:
+The application will be available at:
 
-```
+```text
 http://localhost:3000
 ```
 
-## Observações
+## Notes
 
-* Projeto voltado para estudo e portfólio
-* Estrutura simples e direta
-* Fácil expansão para novos módulos
+* Built for learning purposes and portfolio projects.
+* Simple and maintainable project structure.
+* Easily extensible with additional modules and features.
 
-## Status do projeto
+## Future Improvements
 
-* Tipo: Full Stack
-* Uso: Portfólio / Estudo
-* Estado: Funcional
+* User authentication (JWT)
+* Task categories
+* Due dates
+* Task priorities
+* Pagination and filtering
+* Unit and integration tests
+* Docker support
 
-```
-```
+## Project Status
+
+* **Type:** Full Stack
+* **Purpose:** Portfolio / Learning
+* **Status:** Functional
